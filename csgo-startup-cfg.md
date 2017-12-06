@@ -8,11 +8,6 @@ Add autoexec.cfg in $CSGO_root/csgo/cfg/
 	bind "KP_END" "buy aug; buy sg556;"
 	bind "KP_DOWNARROW" "buy ump45;"
 
-	// Quick switch + bomb drop
-	alias "+dropbomb" "use weapon_knife; use weapon_c4; drop;"
-	alias "-dropbomb" "slot2; slot1;"
-	bind "Q" "+dropbomb"
-
 	// Find bomb easier
 	alias "+find_bomb" "+use; gameinstructor_enable 1; cl_clearhinthistory;"
 	alias "-find_bomb" "-use; gameinstructor_enable 0; cl_clearhinthistory;"
@@ -26,5 +21,3 @@ Add autoexec.cfg in $CSGO_root/csgo/cfg/
 	cl_lagcompensation "1"
 	
 	host_writeconfig
-
-
