@@ -1,3 +1,5 @@
+## Custom CSGO Configuration
+
 Right click CSGO in Steam menu->Properties
 
 Launch options: -novid +exec autoexec -threads 8 -high -tickrate 128 -nojoy -nod3d9ex +cl_forcepreload 1 +mat_queue_model 2
