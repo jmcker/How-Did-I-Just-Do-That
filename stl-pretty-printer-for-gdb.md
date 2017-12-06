@@ -1,10 +1,11 @@
 
+## C++ STL Container Pretty Printer for GDB
+
 Add a Python pretty printer to gdb so that STL containers can be printed nicely.
 
 
-Checkout: 
+Checkout (Subversion): 
 	svn co svn://gcc.gnu.org/svn/gcc/trunk/libstdc++-v3/python
-using suversion.
 
 Add:
 	python
@@ -13,11 +14,11 @@ Add:
 	from libstdcxx.v6.printers import register_libstdcxx_printers
 	register_libstdcxx_printers (None)
 	end
+	
 to ~/.gdbinit
 
 gdb will display an error message at startup if there is a problem with the path.
 It doesn't like tilde expansion, so use a full root path.
-
 
 
 Source: https://sourceware.org/gdb/wiki/STLSupport
