@@ -18,9 +18,8 @@ Autostart Synergy Client for sharing a keyboard and mouse to the Pi.
 Add:
 ```
 @synergyc --name raspberrypi <Synergy server address>
-```
-	
-to one or both of the following:
+```	
+to one or both of the following.
 
 Apply to current user only:
 ```
