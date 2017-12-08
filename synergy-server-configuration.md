@@ -64,6 +64,8 @@ keystroke(Alt+Shift+Tilde) = switchInDirection(left)
 ```
 A list of keys and commands other than swapping is available [here](https://github.com/symless/synergy-core/wiki/Text-Config#Keynames).
 
+### Loading the Configuration File
+From the server dialog, choose *synergy.sgc* as an existing configuration file and start the server.
 
 Source: https://github.com/symless/synergy-core/wiki/Text-Config
         https://davejamesmiller.wordpress.com/2013/02/23/synergy-hotkey-to-toggle-screens/
