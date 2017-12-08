@@ -5,15 +5,19 @@ Add a Python pretty printer to gdb so that STL containers can be printed nicely.
 
 
 Checkout (Subversion): 
-	svn co svn://gcc.gnu.org/svn/gcc/trunk/libstdc++-v3/python
+```
+svn co svn://gcc.gnu.org/svn/gcc/trunk/libstdc++-v3/python
+```
 
 Add:
-	python
-	import sys
-	sys.path.insert(0, '/mnt/d/jmcker/Documents/Git Repos/gdb_printers')
-	from libstdcxx.v6.printers import register_libstdcxx_printers
-	register_libstdcxx_printers (None)
-	end
+```
+python
+import sys
+sys.path.insert(0, '/mnt/d/jmcker/Documents/Git Repos/gdb_printers')
+from libstdcxx.v6.printers import register_libstdcxx_printers
+register_libstdcxx_printers (None)
+end
+```
 	
 to ~/.gdbinit
 
