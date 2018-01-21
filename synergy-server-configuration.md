@@ -24,11 +24,11 @@ These could also optionally be linked on both sides (useful later):
 ```
 section: links
 	JMCKER-NEWPC:
-    left = raspberrypi
+		left = raspberrypi
 		right = raspberrypi
 	raspberrypi:
 		left = JMCKER-NEWPC
-    right = JMCKER-NEWPC
+		right = JMCKER-NEWPC
 end
 ```
 For more than two screens this would look something like:
