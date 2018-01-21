@@ -23,11 +23,11 @@ to one or both of the following.
 
 Apply to current user only:
 ```
-~/.config/lxsessionLXDE-pi/autostart
+~/.config/lxsession/LXDE-pi/autostart
 ```
 Apply globally to all users:
 ```
-/etc/xdg/lxsessionLXDE-pi/autostart
+/etc/xdg/lxsession/LXDE-pi/autostart
 ```
 
 Source: http://www.raspberry-projects.com/pi/pi-operating-systems/raspbian/auto-running-programs-gui
