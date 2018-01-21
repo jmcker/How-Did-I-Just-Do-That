@@ -19,7 +19,7 @@ Add:
 ```
 @synergyc --name raspberrypi <Synergy server address>
 ```	
-to one or both of the following.
+to one or both of the following. (Be sure to use `sudo vim autostart` to edit the file or you won't be able to write changes.)
 
 Apply to current user only:
 ```
