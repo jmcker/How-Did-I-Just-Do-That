@@ -9,6 +9,7 @@ Create a custom configuration for Synergy. Manually adds the RPi as a client and
 section: screens
 	JMCKER-NEWPC:
 	raspberrypi:
+	raspberrypi-250:
 end
 ```
 3. Link the screens in the desired configuration:
@@ -18,6 +19,9 @@ section: links
 		right = raspberrypi
 	raspberrypi:
 		left = JMCKER-NEWPC
+		right = raspberrypi-250
+	raspberrypi-250:
+		left = raspberrypi
 end
 ```
 These could also optionally be linked on both sides (useful later):
@@ -28,10 +32,13 @@ section: links
 		right = raspberrypi
 	raspberrypi:
 		left = JMCKER-NEWPC
+		right = raspberrypi-250
+	raspberrypi-250:
+		left = raspberrypi
 		right = JMCKER-NEWPC
 end
 ```
-For more than two screens this would look something like:
+Visually, this would look something like:
 ```
 <Screen 1><Screen 2><Screen 3><Screen 1>
 ````
@@ -65,7 +72,23 @@ keystroke(Alt+Shift+Tilde) = switchInDirection(left)
 A list of keys and commands other than swapping is available [here](https://github.com/symless/synergy-core/wiki/Text-Config#Keynames).
 
 ### Loading the Configuration File
+#### GUI
 From the server dialog, choose *synergy.sgc* as an existing configuration file and start the server.
+#### Command Line
+Start `synergy-core --server` with the `-c` option followed by the path to the configuration file.
+```
+synergy-core --server -c ~/synergy.sgc
+```
+To debug any problems with the configuration file or connections, launch the server in the foreground with the `-f` option.
+```
+synergy-core --server -f -c ~/synergy.sgc
+```
 
-Source: https://github.com/symless/synergy-core/wiki/Text-Config
-        https://davejamesmiller.wordpress.com/2013/02/23/synergy-hotkey-to-toggle-screens/
+
+
+Source: 
+- https://github.com/symless/synergy-core/wiki/Text-Config
+- https://davejamesmiller.wordpress.com/2013/02/23/synergy-hotkey-to-toggle-screens/
+- https://github.com/symless/synergy-core/wiki/Command-Line#synergys-options
+
+Complete example: [.synergy.conf](https://github.com/jmcker/.cfg/blob/master/.synergy.conf)
