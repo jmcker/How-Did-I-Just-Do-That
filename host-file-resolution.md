@@ -24,3 +24,6 @@ This can be used to resolve names instead of having to remember IPs.
 172.221.129.206     externalserver
 192.168.1.45:90     internalsite.com
 ```
+
+Sources:
+- https://bencane.com/2013/10/29/managing-dns-locally-with-etchosts/
