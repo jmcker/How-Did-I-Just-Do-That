@@ -1,7 +1,8 @@
 
-## Git Credential Cache on Windows Subsystem for Linux
+## UNIX File Permissions on Windows Subsystem for Linux
 
-Mitigate file permission issues when using Git's credential caching feature.
+Mitigate file permission issues (and increase security) when using programs that require restrictive file permissions.
+Examples include: Git's credential caching feature, SSH agent, GnuPG, etc.
 
 ### Background ###
 With WSL (Windows Subsystem Linux), I prefer to do most of my work and keep most of my files and folders outside of the normal WSL Linux root.
@@ -50,6 +51,22 @@ chmod 740 /home/$USER/.ssh
 # Create the soft link
 ln -s /home/$USER/.ssh /mnt/c/Users/$USER/.ssh
 ```
+
+### GnuPG ###
+
+```bash
+# Move the existing folder or create a new one
+mv /mnt/c/Users/$USER/.gnupg /home/$USER/.gnupg || mkdir /home/$USER/.gnupg
+
+# Assign the proper permissions to the folder
+chmod 700 /home/$USER/.gnupg
+
+# Create the soft link
+ln -s /home/$USER/.gnupg /mnt/c/Users/$USER/.gnupg
+```
+
+### Generalization ###
+The general move and symlink strategy can really be applied to any program.
 
 Sources:
 - https://wpdev.uservoice.com/forums/266908-command-prompt-console-windows-subsystem-for-l/suggestions/13309479-emulate-posix-compliant-filesystem-permissions
