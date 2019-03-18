@@ -34,4 +34,15 @@ Commands:
 :::  -u, uninstall        Uninstall PiVPN from your system!
 ```
 
-Source: http://www.pivpn.io/
+Service Controls:
+```
+Stop the server:    sudo systemctl stop openvpn
+Start the server:   sudo systemctl start openvpn
+Restart the server: sudo systemctl restart openvpn
+Enable autostart:   sudo systemctl enable openvpn
+Disable autostart:  sudo systemctl disable openvpn
+```
+
+Source: 
+- http://www.pivpn.io/
+- https://github.com/pivpn/pivpn/issues/684
